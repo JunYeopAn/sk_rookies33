@@ -84,44 +84,44 @@ def detect_sensitive_info(content):
     return detected
 
 def analyze_new_file(file_path):
-    print("\n" + "=" * 30 + "\n")
-    print("새 파일이 생성되었습니다. \n")
-    print(f"시간 : {get_current_time()} \n")
-    print(f"경로 : {file_path} \n")
+    print("\n" + "=" * 30)
+    print("새 파일이 생성되었습니다.")
+    print(f"시간 : {get_current_time()}")
+    print(f"경로 : {file_path}")
 
     if is_warning_extension(file_path):
-        print("[WARNING] 주의 확장자 파일입니다. \n")
-        print(f"{dangerous_extensions} 파일은 보안 위험 가능성이 있습니다. \n")
+        print("[WARNING] 주의 확장자 파일입니다.")
+        print(f"{dangerous_extensions} 파일은 보안 위험 가능성이 있습니다.")
     else:
         print("[OK] 일반 확장자 파일입니다.")
     
     content = read_file_content(file_path)
     if content is None:
-        print("[INFO] 내용 분석을 건너뜁니다. \n")
-        print("=" * 30 + "\n")
+        print("[INFO] 내용 분석을 건너뜁니다.")
+        print("=" * 30)
         return
     
     detected_infos = detect_sensitive_info(content)
     if detected_infos:
-        print("[WARNING] 민감 정보로 의심되는 내용이 발견되었습니다. \n")
+        print("[WARNING] 민감 정보로 의심되는 내용이 발견되었습니다.")
         for info_type, count in detected_infos:
-            print(f" - {info_type}: {count}개 탐지 \n")
+            print(f" - {info_type}: {count}개 탐지")
     else:
-        print("[OK] 민감 정보 패턴이 탐지되지 않았습니다. \n")
-    print("=" * 30 + "\n")
+        print("[OK] 민감 정보 패턴이 탐지되지 않았습니다.")
+    print("=" * 30)
 
 ## Main Monitoring Function
 def monitor_directory():
     ensure_monitor_directory()
     
-    print("[START] 디렉터리 모니터링 시작 \n")
-    print(f"[TARGET] 감시 대상 : {monitor_dir} \n")
-    print(f"[INFO] 검사 주기 : {check_interval}초 \n")
-    print("[INFO] 프로그램 종료 : Ctrl + C \n")
+    print("[START] 디렉터리 모니터링 시작")
+    print(f"[TARGET] 감시 대상 : {monitor_dir}")
+    print(f"[INFO] 검사 주기 : {check_interval}초")
+    print("[INFO] 프로그램 종료 : Ctrl + C")
 
     known_files = get_all_files(monitor_dir)
 
-    print(f"[INFO] 초기 파일 목록 기록 완료 : {len(known_files)}개 \n")
+    print(f"[INFO] 초기 파일 목록 기록 완료 : {len(known_files)}개")
 
     while 1:
         try:

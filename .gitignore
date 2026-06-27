@@ -1,2 +1,8 @@
 .DS_Store
 .vscode/
+__pycache__/
+*.pyc
+
+# test monitor directory
+monitor_directory/
+PBL/python2/monitor_directory/

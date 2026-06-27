@@ -6,6 +6,7 @@ __pycache__/
 # doc file
 *.docx
 *.pdf
+*.txt
 
 # image file
 *.jpg

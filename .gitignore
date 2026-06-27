@@ -3,6 +3,10 @@
 __pycache__/
 *.pyc
 
+# doc file
+*.docx
+*.pdf
+
 # image file
 *.jpg
 *.png

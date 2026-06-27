@@ -3,6 +3,10 @@
 __pycache__/
 *.pyc
 
+# image file
+*.jpg
+*.png
+
 # test monitor directory
 monitor_directory/
 PBL/python2/monitor_directory/

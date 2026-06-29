@@ -12,6 +12,11 @@ __pycache__/
 *.jpg
 *.png
 
+# class data
+6.19/
+6.22~6.26/
+6.29~7.3
+
 # test monitor directory
 monitor_directory/
-PBL/python2/monitor_directory/
+PBL/py2/monitor_directory/

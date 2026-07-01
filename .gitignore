@@ -7,6 +7,7 @@ __pycache__/
 *.docx
 *.pdf
 *.txt
+*.csv
 
 # image file
 *.jpg
@@ -15,7 +16,8 @@ __pycache__/
 # class data
 6.19/
 6.22~6.26/
-6.29~7.3
+6.29~7.3/
+PBL/answer/
 
 # test monitor directory
 monitor_directory/
